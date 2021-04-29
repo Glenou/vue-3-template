@@ -1,0 +1,19 @@
+// Hide something only visually => better for seo and screen readers
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+// text flickers when transform: scale
+.no-flickr {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+	backface-visibility:         hidden;
+	filter: blur(.0px);
+}

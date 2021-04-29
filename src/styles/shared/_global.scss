@@ -1,0 +1,31 @@
+body {
+	margin: 0;
+	font-family: $font-primary;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+    font-size: 16px;
+	line-height: 24px;
+	color: black;
+	background: white;
+	overflow-x: hidden;
+}
+
+a {
+	font-weight: inherit;
+	font-size: inherit;
+	color: $blue;
+	transition: $transition-basic;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $indigo;
+	}
+}
+
+ol,
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}

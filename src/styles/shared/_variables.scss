@@ -1,0 +1,35 @@
+/* ** COLORS ** */
+// Basic Colors from Laravel
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+/* ** FONTS ** */
+// Families
+$font-primary: sans-serif;
+// Weights
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+
+/* ** TRANSITIONS ** */
+$transition-basic: all 0.2s ease-in-out;
+$transition-dynamic: all 0.4s cubic-bezier(.84,.02,.22,.99);
+// Easings
+$ease-dynamic: cubic-bezier(.84,.02,.22,.99);
+
+
+/* ** Breakpoints ** */
+$sm-break: 640px; // Tailwind
+$md-break: 768px; // Tailwind
+$lg-break: 1024px; // Tailwind
+$xl-break: 1280px; // Tailwind
+$xxl-break: 1536px; // Tailwind

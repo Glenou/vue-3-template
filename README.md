@@ -30,7 +30,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - Follows pages structures
 - Has a *shared* folder to contain all components and layouts which can be used everywhere on the project (form inputs, pop-ins...)
 
-**Ex :** 
+##### Ex :
 - views *folder*
     - page-name *folder*
         - components *folder*

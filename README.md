@@ -41,7 +41,8 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
             - another-component-name *component*
         - another-page-name *component*
 
-#### src/styles : contains all styles
+#### src/styles
+- Contains all styles
 - Follows the *src/views* architecture
 
 ### Naming convention for components

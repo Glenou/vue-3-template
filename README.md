@@ -33,17 +33,30 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ##### Ex :
 - views *folder*
     - page-name *folder*
-        - components *folder*
+        - components *folder : all components specifics to this page*
             - component-name *component*
-        - page-name *component*
+        - page-name *component : the page*
     - another-page-name *folder*
-        - components *folder*
+        - components *folder : all components specifics to this page*
             - another-component-name *component*
-        - another-page-name *component*
+        - another-page-name *component : the page*
+    - shared *folder*
+        - components *folder : all components that are not specific to a page*
+            - another-component-name *component*
+        - layouts *folder : if we want to use templates using the slots*
 
 ### src/styles
 - Contains all styles
 - Follows the *src/views* architecture
+
+### src/data
+- Contains all functions used to 
+    - get data
+    - process data
+- Functions can be grouped in subfolders
+
+### src/utils
+- Contains all utilities functions (sort an array, generate key...)
 
 ## Naming convention for components
 - Explicit to its purpose

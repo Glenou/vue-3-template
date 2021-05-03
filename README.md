@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+git clone https://github.com/Glenou/vue-3-template.git
 yarn install
 ```
 

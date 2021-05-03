@@ -25,6 +25,22 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Architecture
 
+### src/models
+- Contains all interfaces for TypeScript
+
+### src/data
+- Contains all functions used to 
+    - get data
+    - process data
+- Functions can be grouped in subfolders
+
+### src/styles
+- Contains all styles
+- Follows the *src/views* architecture
+
+### src/utils
+- Contains all utilities functions (sort an array, generate key...)
+
 ### src/views 
 - Contains all vue components
 - Follows pages structures
@@ -44,19 +60,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
         - components *folder : all components that are not specific to a page*
             - another-component-name *component*
         - layouts *folder : if we want to use templates using the slots*
-
-### src/styles
-- Contains all styles
-- Follows the *src/views* architecture
-
-### src/data
-- Contains all functions used to 
-    - get data
-    - process data
-- Functions can be grouped in subfolders
-
-### src/utils
-- Contains all utilities functions (sort an array, generate key...)
 
 ## Naming convention for components
 - Explicit to its purpose

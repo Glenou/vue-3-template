@@ -2,8 +2,9 @@
 @import 'shared/variables';
 @import 'shared/global';
 @import 'shared/animations';
+@import 'shared/components';
 
 // TODO : more here
 
-// Overrides
-@import 'shared/usable';
+// Overrides and utilities classes
+@import 'shared/utilities';

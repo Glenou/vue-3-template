@@ -28,10 +28,10 @@ export default defineComponent({
     const store = useStore();
 
     setTimeout(() => {
-      store.commit('flashMessage/setMessage', {
+      store.dispatch('flashMessage/createMessage', {
+        title: 'This is a test message',
         text: 'Modules in Vuex Store are working!',
         class: 'info',
-        pop: true,
       });
       store.commit('counter/increment');
     }, 2000);

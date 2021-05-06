@@ -1,13 +1,18 @@
+import { CommitModel } from '@/models/CommitModel';
 import { FlashMessageModel } from '@/models/FlashMessageModel';
+
+const defaultTimeout = 5000;
 
 const FlashMessageModule = {
 
   namespaced: true,
 
   state: (): FlashMessageModel => ({
+    title: '',
     text: '',
     class: 'info',
-    pop: false,
+    active: false,
+    timeout: defaultTimeout,
   }),
 
   getters: {
@@ -15,14 +20,27 @@ const FlashMessageModule = {
   },
 
   actions: {
-    //  Potential actions
+    createMessage({ commit }: CommitModel, payload: FlashMessageModel): void {
+      commit('setMessage', payload);
+      setTimeout(() => {
+        commit('hideMessage');
+      }, payload.timeout ? payload.timeout : defaultTimeout);
+    },
   },
 
   mutations: {
     setMessage(state: FlashMessageModel, payload: FlashMessageModel): void {
+      state.title = payload.title;
       state.text = payload.text;
       state.class = payload.class;
-      state.pop = payload.pop;
+      state.active = true;
+      state.timeout = payload.timeout ? payload.timeout : defaultTimeout;
+      console.log(state);
+    },
+
+    hideMessage(state: FlashMessageModel): void {
+      state.active = false;
+      console.log(state);
     },
   },
 

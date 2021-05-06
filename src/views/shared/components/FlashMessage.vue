@@ -1,7 +1,17 @@
 <template>
-  <div v-if="message.text" :class="'flash-popup pop-'+message.pop+' '+message.class">
-    <span>{{ message.text }}</span>
-  </div>
+  <transition name="fade">
+    <div v-if="true" :class="[
+      'flash-message',
+      message.class,
+    ]">
+      <div>
+        <p>{{ message.title }}</p>
+      </div>
+      <div>
+        <p>{{ message.text }}</p>
+      </div>
+    </div>
+  </transition>
 </template>
 
 <script>

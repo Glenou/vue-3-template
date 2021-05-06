@@ -4,7 +4,7 @@ const FlashMessageModule = {
 
   namespaced: true,
 
-  state: (): any => ({
+  state: (): FlashMessageModel => ({
     text: '',
     class: 'info',
     pop: false,
@@ -19,7 +19,7 @@ const FlashMessageModule = {
   },
 
   mutations: {
-    setMessage(state: any, payload: FlashMessageModel): void {
+    setMessage(state: FlashMessageModel, payload: FlashMessageModel): void {
       state.text = payload.text;
       state.class = payload.class;
       state.pop = payload.pop;

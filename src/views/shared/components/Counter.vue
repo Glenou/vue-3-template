@@ -14,7 +14,7 @@ export default defineComponent({
     const store = useStore();
 
     return {
-      count: computed(() => store.state.count),
+      count: computed(() => store.state.counter.count),
     };
   },
 

@@ -33,7 +33,7 @@ export default defineComponent({
         class: 'info',
         pop: true,
       });
-      store.commit('incrementCount');
+      store.commit('counter/increment');
     }, 2000);
   },
 

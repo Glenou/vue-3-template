@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">
-    <div v-if="true" :class="[
+    <div v-if="message.active" :class="[
       'flash-message',
       message.class,
     ]">

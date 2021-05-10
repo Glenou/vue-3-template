@@ -1,3 +1,3 @@
-export default function generateId(): string {
-  return `${Date.now() * Math.random()}`;
+export default function generateId(): number {
+  return Math.round(Date.now() * Math.random());
 }

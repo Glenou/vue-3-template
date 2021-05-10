@@ -11,6 +11,7 @@
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
 import { useStore } from '@/store';
+import generateId from '@/utils/ids';
 import HelloWorld from '@/views/home/components/HelloWorld.vue'; // @ is an alias to /src
 import FlashMessage from '../shared/components/FlashMessage.vue';
 import Counter from '../shared/components/Counter.vue';
@@ -30,8 +31,8 @@ export default defineComponent({
 
     const triggerFlashMessage = () => {
       store.dispatch('flashMessage/createMessage', {
-        title: 'This is a test message',
-        text: 'Modules in Vuex Store are working!',
+        title: 'Modules in Vuex Store are working!',
+        text: `test ${generateId()}`,
         class: 'info',
       });
       store.commit('counter/increment');

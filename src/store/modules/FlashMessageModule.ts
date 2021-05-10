@@ -1,5 +1,14 @@
-import { CommitModel } from '@/models/CommitModel';
+import { Commit as VuexCommit } from 'vuex';
 import { FlashMessageModel } from '@/models/FlashMessageModel';
+
+type Getters = {
+  awaitTime: number;
+}
+
+type Commit = {
+  commit: VuexCommit;
+  getters: Getters;
+}
 
 const defaultTimeout = 8000;
 
@@ -16,15 +25,19 @@ const FlashMessageModule = {
   }),
 
   getters: {
-    //  Potential getters
+    awaitTime(state: FlashMessageModel): number {
+      return state.active ? state.timeout : 0;
+    },
   },
 
   actions: {
-    createMessage({ commit }: CommitModel, payload: FlashMessageModel): void {
-      commit('setMessage', payload);
+    createMessage({ commit, getters }: Commit, payload: FlashMessageModel): void {
       setTimeout(() => {
-        commit('hideMessage');
-      }, payload.timeout ? payload.timeout : defaultTimeout);
+        commit('setMessage', payload);
+        setTimeout(() => {
+          commit('hideMessage');
+        }, payload.timeout ? payload.timeout : defaultTimeout);
+      }, getters.awaitTime);
     },
   },
 

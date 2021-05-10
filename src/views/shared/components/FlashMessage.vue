@@ -1,13 +1,13 @@
 <template>
-  <transition name="fade">
+  <transition name="flash-message">
     <div v-if="message.active" :class="[
       'flash-message',
       message.class,
     ]">
-      <div>
+      <div class="flash-message-title">
         <p>{{ message.title }}</p>
       </div>
-      <div>
+      <div class="flash-message-text">
         <p>{{ message.text }}</p>
       </div>
     </div>

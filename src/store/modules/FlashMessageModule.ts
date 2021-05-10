@@ -1,7 +1,7 @@
 import { CommitModel } from '@/models/CommitModel';
 import { FlashMessageModel } from '@/models/FlashMessageModel';
 
-const defaultTimeout = 5000;
+const defaultTimeout = 8000;
 
 const FlashMessageModule = {
 
@@ -35,12 +35,10 @@ const FlashMessageModule = {
       state.class = payload.class;
       state.active = true;
       state.timeout = payload.timeout ? payload.timeout : defaultTimeout;
-      console.log(state);
     },
 
     hideMessage(state: FlashMessageModel): void {
       state.active = false;
-      console.log(state);
     },
   },
 
